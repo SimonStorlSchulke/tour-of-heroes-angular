@@ -1,0 +1,27 @@
+<ng-container *ngIf="hero">
+    <form action="/form/submit" method="none">
+        <div class="input-line">
+            <label style="display: inline-block; width: 120px;" for="name">Name:</label>
+            <input name="name" [(ngModel)]="hero.name" placeholder="enter name"><br>
+        </div>
+        <div class="input-line">
+            <label style="display: inline-block; width: 120px;" for="level">level:</label>
+            <input [(ngModel)]="hero.level" type="number" name="level"><br>
+        </div>
+        <div class="input-line">
+            <label style="display: inline-block; width: 120px;" for="weapon">weapon:</label>
+            <input name="weapon" [(ngModel)]="hero.weapon" placeholder="enter weapon">
+        </div>
+        <div class="input-line">
+            <label style="display: inline-block; width: 120px;" for="attackDamage">Attack Damage:</label>
+            <input [(ngModel)]="hero.attackDamage" type="number" name="attackDamage"><br>
+        </div>
+        <div class="input-line">
+            <label style="display: inline-block; width: 120px;" for="maxHealth">Max. Health:</label>
+            <input [(ngModel)]="hero.maxHealth" type="number" name="maxHealth"><br>
+        </div>
+    </form>
+    <button (click)="saveChanges()">save changes</button>
+    <!--<button (click)="thumbnailUrl">th</button>-->
+</ng-container>
+<img class="thumbnail" [src]="thumbnailUrl">

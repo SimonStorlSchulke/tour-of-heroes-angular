@@ -1,0 +1,29 @@
+<div [class.visible]="visible" class="overlay">
+    <div class="window">
+        <h2>New Hero</h2>
+        <form action="/form/submit" method="post">
+            <div class="input-line">
+                <label for="name">Name:</label>
+                <input [(ngModel)]="newHero.name" name="name" type="text" placeholder="enter name" autofocus />
+            </div>
+            <div class="input-line">
+                <label for="level">Level:</label>
+                <input [(ngModel)]="newHero.level" type="number" name="level" value="1">
+            </div>
+            <div class="input-line">
+                <label for="weapon">Weapon:</label>
+                <input [(ngModel)]="newHero.weapon" name="weapon" type="text" placeholder="enter weapon"/>
+            </div>
+            <div class="input-line">
+                <label for="attackDamage">Attack Damage:</label>
+                <input [(ngModel)]="newHero.attackDamage" type="number" name="attackDamage" value="1">
+            </div>
+            <div class="input-line">
+                <label for="maxHealth">Max. Health:</label>
+                <input [(ngModel)]="newHero.maxHealth" type="number" name="maxHealth" value="1">
+            </div>
+            <input (click)="saveHero()" type="submit" value="Save"/>
+        </form>
+        <button (click)="close()" class="btn-close">x</button>
+    </div>
+</div>

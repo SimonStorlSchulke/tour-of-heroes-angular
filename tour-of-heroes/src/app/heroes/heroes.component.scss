@@ -1,0 +1,95 @@
+.button-wrapper {
+    display: block;
+}
+
+h2 {
+    margin-top: 0px;
+    height: 30px;
+}
+
+button {
+    border: none;
+    padding: 0px;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    background: none;
+    cursor: pointer
+}
+
+
+.hero-id {
+    background-color: #222;
+    color: white;
+    height: 25px;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    width: 0px;
+    padding: 0px 20px 0px 15px;
+}
+
+.hero-name {
+    background-color: rgb(216, 216, 216);
+    height: 25px;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    width: calc(100% - 80px);
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.hero-selector {
+    width: 210px;
+    max-width: 210px;
+}
+
+.hero-delete {
+    background-color: rgb(180, 0, 0);
+    color: white;
+    height: 25px;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    width: 22px;
+    padding-left: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hero-delete:hover {
+    background-color: red;
+}
+
+.hero-selector:hover {
+    color: white;
+}
+
+.selected {
+    background-color: rgb(47, 47, 115);
+    color: white;
+}
+
+.hero-details {
+    width: calc(100% - 220px);
+}
+
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

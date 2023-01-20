@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="column hero-selector">
+        <button  *ngFor="let hero of heroes">
+            <span class="hero-id">{{hero.id}}</span>
+            <span class="hero-name" (click)="onSelectHero(hero)" [class.selected]="hero === selectedHero">{{hero.name}}</span>
+            <span class="hero-delete" (click)="deleteHero(hero)">x</span>
+        </button>
+        <button style="margin-top: 20px;" (click)="newHero()">
+            <span class="hero-id">+</span>
+            <span style="width: calc(100% - 57px);" class="hero-name">New Hero</span>
+        </button>
+    </div>
+    <app-heroe-detail [hero]="selectedHero"></app-heroe-detail>
+</div>
+
+<app-hero-creator [visible]="creatorVisible" (savedHeroEvent)="onSavedNewHero()" (closeCreatorEvent)="onCloseCreator()"></app-hero-creator>

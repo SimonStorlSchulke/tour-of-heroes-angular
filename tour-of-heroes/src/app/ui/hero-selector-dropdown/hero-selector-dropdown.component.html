@@ -1,0 +1,3 @@
+<select [(ngModel)]="selectedHeroID" (change)="onSelectedHero()" name="cars" id="cars">
+    <option *ngFor="let hero of heroes" value="{{hero.id}}">{{hero.name}}</option>
+  </select>

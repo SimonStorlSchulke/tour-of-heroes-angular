@@ -1,0 +1,20 @@
+.input-line {
+    margin-bottom: 10px;
+}
+label {
+    display: inline-block;
+    width: 170px;
+    color: #777777;
+}
+input {
+    padding: 5px 10px;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
