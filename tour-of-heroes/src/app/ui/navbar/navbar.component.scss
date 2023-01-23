@@ -1,0 +1,21 @@
+.navbar {
+    width: calc(100% + 40px);
+    height: 35px;
+    font-size: 17px;
+    background-color: rgb(17, 11, 42);
+    margin: -20px;
+    padding: 0px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: inline-block;
+    padding: 5px;
+    padding-top: 8px;
+}
+
+.tab-selected {
+    background-color: rgb(33, 25, 68);
+    background: linear-gradient(rgb(53, 94, 241) 4px, rgb(33, 25, 68) 4.5px);
+}

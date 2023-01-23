@@ -1,6 +1,12 @@
 <h2>BATTLE!</h2>
 
+<div>Select 2 heroes!</div>
+
 <ui-hero-selector-dropdown #heroSelector1></ui-hero-selector-dropdown>
 <ui-hero-selector-dropdown #heroSelector2></ui-hero-selector-dropdown>
 
-<button (click)="startBattle()">Start Battle!</button>
+<button style="margin-left: 10px;" (click)="startBattle()">Start Battle!</button>
+
+<ui-battlescreen #battlescreen [hero1]="hero1" [hero2]="hero2"></ui-battlescreen>
+
+<div *ngIf="hero1 && hero2" class="battle-console">{{battleText}}</div>

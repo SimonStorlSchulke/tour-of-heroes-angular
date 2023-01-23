@@ -12,6 +12,8 @@ import { NotifierComponent } from './notifier/notifier.component';
 import { BattleComponent } from './battle/battle.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroSelectorDropdownComponent } from './ui/hero-selector-dropdown/hero-selector-dropdown.component';
+import { BattlescreenComponent } from './ui/battlescreen/battlescreen.component';
+import { NavbarComponent } from './ui/navbar/navbar.component';
 
 const routes: Routes = [
   { path: 'overview', component: HeroesComponent },
@@ -27,7 +29,9 @@ const routes: Routes = [
     HeroCreatorComponent,
     NotifierComponent,
     BattleComponent,
-    HeroSelectorDropdownComponent
+    HeroSelectorDropdownComponent,
+    BattlescreenComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

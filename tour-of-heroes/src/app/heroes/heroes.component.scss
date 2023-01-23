@@ -17,9 +17,8 @@ button {
     cursor: pointer
 }
 
-
 .hero-id {
-    background-color: #222;
+    background-color: rgb(27, 21, 41);
     color: white;
     height: 25px;
     display: inline-flex;
@@ -30,7 +29,7 @@ button {
 }
 
 .hero-name {
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(61, 49, 116);
     height: 25px;
     display: inline-flex;
     vertical-align: middle;
@@ -40,7 +39,11 @@ button {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
 
+.hero-name:not(.selected):hover {
+    background-color: rgb(68, 51, 142);
+    color: white;
 }
 
 .hero-selector {
@@ -49,7 +52,7 @@ button {
 }
 
 .hero-delete {
-    background-color: rgb(180, 0, 0);
+    background-color: rgb(143, 0, 64);
     color: white;
     height: 25px;
     display: inline-flex;
@@ -63,15 +66,12 @@ button {
 }
 
 .hero-delete:hover {
-    background-color: red;
+    background-color: rgb(190, 3, 87);
 }
 
-.hero-selector:hover {
-    color: white;
-}
 
 .selected {
-    background-color: rgb(47, 47, 115);
+    background-color: rgb(96, 75, 218);
     color: white;
 }
 

@@ -12,6 +12,14 @@ import { NotifierComponent } from '../notifier/notifier.component';
 
 export class HeroeDetailComponent {
 
+onThumbnailSelected(event: any) {
+  if (this.hero) {
+    this.heroService.uploadThumbnail(this.hero.id, event.target.files[0]).subscribe(id => {
+      console.log("IMG ID: ", id);
+    });
+  }
+}
+
   @Input() hero?: Hero;
   thumbnailUrl: string = "a";
 

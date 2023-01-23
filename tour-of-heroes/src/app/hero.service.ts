@@ -10,7 +10,7 @@ import { DATABASE_URL } from 'src/main';
 })
 export class HeroService {
 
-  heroApiToken: string = "83829e9b7442be374f52cb6c6fbd3ebcf3c4d3969a9bf3fc1bee315e42e8f4a2618ef6a540481e3b568a10afb494174f9da8a0ac7850ee82af85ef8fd7a3e305f082ed1e7c265d3e6351e025444ce0e49c9621ebb2b648f895052fb9ce815627124cb16d531fda90ecbdd5bbd96c0e853008f532b983711cf4160d41482af737"
+  heroApiToken: string = "3ce5e0c9dd4939c33c8076484da151d8212e61b0bfdb2f3d194fc8463dd57241f53e6cb087073ee0bcecf6c95d63775c933df45b41e9b0bfb9278608c598f367be6e08abd7cfabed3ab541ad010917a64009095cc788f26787a18df11d9c4dd37a2aa534547769031d909a27076dfc75bdb056ccac58f63e39177b54483177a4"
   constructor(private http: HttpClient) {}
   heroesData: any;
 
@@ -43,6 +43,19 @@ export class HeroService {
     return heroesObservable;
   }
 
+  uploadThumbnail(heroID: number, file: File): Observable<string> {
+    const formData = new FormData()
+
+    formData.append('files.thumbnail', file);
+    console.log(file);
+
+    return new Observable(observer => {
+      this.http.post(DATABASE_URL+"/api/upload", formData, {headers: this.headers }).subscribe( response => {
+        observer.next((response as any).data[0].id);
+      });
+    })
+  }
+
   getHeroFromID(id: number): Observable<Hero> {
 
     let hero: Hero = {} as Hero;
@@ -62,7 +75,6 @@ export class HeroService {
         }
         observer.next(hero);
       });
-
     });
   }
 

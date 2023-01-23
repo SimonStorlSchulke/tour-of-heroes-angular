@@ -1,0 +1,20 @@
+<div *ngIf="hero1 && hero2" class="screen">
+    <div class="hero-display">
+        <h2>{{hero1.name}}</h2>
+        <img style="border-radius: 0px 10px 0px 10px;" [class.dead]="hero1.currentHealth <= 0" class="thumbnail" [src]="thumbnailUrl1">
+        <span [class.wt1-has-turn]="currentAttacker === 1" class="weapon-text wt-1">{{hero1.weapon}} <span style="color: red;">{{hero1.attackDamage}} dmg!</span></span>
+        <div class="healthbar">
+            <div class="healthbar-fill" [style.width]="getLivePercentage(hero1)"><span class="health-text">{{hero1.currentHealth}}</span></div>
+        </div>
+    </div>
+    <h2 class="vs">⎯⎯⎯⎯⎯ VS ⎯⎯⎯⎯⎯</h2>
+
+    <div class="hero-display">
+        <h2>{{hero2.name}}</h2>
+        <span [class.wt2-has-turn]="currentAttacker === 2" class="weapon-text wt-2">{{hero2.weapon}} <span style="color: red;">{{hero2.attackDamage}} dmg!</span></span>
+        <div class="healthbar" style="text-align: right;">
+            <div class="healthbar-fill" [style.width]="getLivePercentage(hero2)"><span class="health-text">{{hero2.currentHealth}}</span></div>
+        </div>
+        <img style="border-radius: 10px 0px 10px 0px;" [class.dead]="hero2.currentHealth <= 0" class="thumbnail" [src]="thumbnailUrl2">
+    </div>
+</div>

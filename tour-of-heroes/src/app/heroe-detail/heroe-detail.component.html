@@ -24,4 +24,7 @@
     <button (click)="saveChanges()">save changes</button>
     <!--<button (click)="thumbnailUrl">th</button>-->
 </ng-container>
-<img class="thumbnail" [src]="thumbnailUrl">
+<div class="thumbnail-container">
+    <img class="thumbnail" [src]="thumbnailUrl">
+    <input (change)="onThumbnailSelected($event)" type="file" class="file-upload">
+</div>

@@ -4,17 +4,39 @@
 label {
     display: inline-block;
     width: 170px;
-    color: #777777;
+    color: #ffffffbc;
 }
 input {
     padding: 5px 10px;
 }
 
-.thumbnail {
+.thumbnail-container {
     position: absolute;
+    top: 35px;
+    right: 0px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(37, 35, 70);
+}
+
+.thumbnail {
     top: 0px;
     right: 0px;
     width: 300px;
     height: 300px;
     object-fit: cover;
+}
+
+.thumbnail-container input {
+    position: relative;
+    bottom: 42px;
+    display: none;
+}
+
+.thumbnail-container:hover input {
+    display: block;
+}
+
+.file-upload {
+    background: none;
 }
